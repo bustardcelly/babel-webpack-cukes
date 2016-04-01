@@ -1,0 +1,43 @@
+{
+  "name": "sick-sacq-client",
+  "version": "1.0.0",
+  "description": "Client for websocket notifications from SICK-SACQ Platform.",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rm -rf build && mkdir -p build",
+    "build": "babel -d ./build ./src -s",
+    "clean-support": "rm -rf features/support && mkdir -p features/support",
+    "clean-steps": "rm -rf features/step_definitions && mkdir -p features/step_definitions",
+    "clean-test": "npm run clean-support && npm run clean-steps",
+    "build-support": "babel --plugins add-module-exports ./features-es2015/support --out-dir ./features/support -s",
+    "build-steps": "babel --plugins add-module-exports ./features-es2015/step_definitions --out-dir ./features/step_definitions -s",
+    "build-test": "npm run build-support && npm run build-steps",
+    "pretest": "npm run build && npm run clean-test && npm run build-test",
+    "test": "cucumber-js"
+  },
+  "author": "SICK Inc.",
+  "devDependencies": {
+    "babel-cli": "^6.6.4",
+    "babel-core": "^6.6.4",
+    "babel-eslint": "^6.0.0-beta.5",
+    "babel-jest": "^9.0.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.6.0",
+    "chai": "^3.5.0",
+    "chain": "^0.1.3",
+    "connect": "^3.4.1",
+    "cucumber": "^0.9.5",
+    "eslint": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "http": "0.0.0",
+    "jest-cli": "^0.9.0",
+    "minimist": "^1.2.0",
+    "open": "0.0.5",
+    "serve-static": "^1.10.2",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.12.14"
+  }
+}
