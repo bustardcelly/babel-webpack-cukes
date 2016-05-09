@@ -15,7 +15,7 @@
     "pretest": "npm run build && npm run clean-test && npm run build-test",
     "test": "cucumber-js"
   },
-  "author": "SICK Inc.",
+  "author": "Todd Anderson",
   "devDependencies": {
     "babel-cli": "^6.6.4",
     "babel-core": "^6.6.4",
