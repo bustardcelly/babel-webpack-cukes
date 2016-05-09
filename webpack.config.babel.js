@@ -8,9 +8,9 @@ const banner = `
 `;
 
 export default {
-  entry: path.join(process.cwd(), 'src', 'js', 'index.js'),
+  entry: ['babel-polyfill', path.join(process.cwd(), 'src', 'js', 'index.js')],
   output: {
-    library: 'SICKSacqClient',
+    library: 'BabelWebpackCukes',
     libraryTarget: 'umd',
     path: path.join(process.cwd(), 'build', 'script'),
     filename: 'bundle.js'
