@@ -1,7 +1,7 @@
 {
-  "name": "sick-sacq-client",
+  "name": "babel-webpack-cukes",
   "version": "1.0.0",
-  "description": "Client for websocket notifications from SICK-SACQ Platform.",
+  "description": "Example project using babel, webpack and cucumberJS",
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf build && mkdir -p build",
